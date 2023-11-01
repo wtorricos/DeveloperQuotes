@@ -1,0 +1,56 @@
+.parchment {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 95%;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.parchment-bg {
+    z-index: 0;
+    width: 80%;
+    height: 100%;
+    box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
+    background: #A5815F;
+    filter: url(#wavy2); /* borders effect with SVG */
+    background-image: url(./parchment_noise.png); /* background noise */
+}
+
+.parchment-container {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    overflow-y: scroll;
+}
+
+.parchment-content {
+    margin-top: 20px;
+    margin-left: 15%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parchment-title {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.parchment-text {
+    font-size: 48px;
+    text-align: center;
+}
+
+.parchment-author {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+}

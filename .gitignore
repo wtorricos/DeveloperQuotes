@@ -1,0 +1,21 @@
+﻿# Ignore IDE files
+# VS Code
+.vscode/
+.ionide/
+# Rider
+.idea/
+# Visual Studio
+.vs/
+
+# Dotnet Build files
+obj/
+bin/
+
+# User Settings
+*.user
+
+# Mac files
+*DS_Store
+
+# log files
+*.log

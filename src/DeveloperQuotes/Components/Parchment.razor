@@ -1,0 +1,38 @@
+@* based on https://codepen.io/AgnusDei/pen/NWPbOxL *@
+
+<div id="@ParchmentId" class="parchment">
+    <div class="parchment-bg"></div>
+    <div class="parchment-container">
+        <div class="parchment-content">
+            <h1 class="parchment-title">@Title</h1>
+
+            <p class="parchment-text mt-3">@ChildContent</p>
+
+            <h3 class="parchment-author mt-3">@Author</h3>
+        </div>
+    </div>
+</div>
+
+<svg>
+    <filter id="wavy2">
+        <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1" />
+        <feDisplacementMap in="SourceGraphic" scale="20" />
+    </filter>
+</svg>
+
+@inject QuoteFactory quoteFactory;
+
+@code {
+    [Parameter]
+    [EditorRequired]
+    public string ParchmentId { get; set; } = null!;
+
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public string? Author { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

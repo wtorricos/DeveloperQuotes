@@ -1,0 +1,323 @@
+﻿# microsoft .editorconfig sample https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options?view=vs-2019
+# based on https://gist.github.com/glektarssza/f368bcc453898fc89c4adff09bc61cf3
+# wizard https://github.com/KristofferStrube/EditorConfigWizard
+# This file is the top-most EditorConfig file
+root = true
+
+# All Files #
+[*]
+indent_style = space
+tab_width = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+##########################################
+# File Extension Settings
+##########################################
+
+# XML project files
+[*.csproj]
+indent_size = 4
+
+# XML config files
+[*.{props,targets,ruleset,config}]
+indent_size = 4
+
+# JSON files
+[*.json]
+indent_size = 2
+
+# Powershell files
+[*.ps1]
+indent_size = 2
+
+# Shell script files
+[*.sh]
+indent_size = 2
+
+# Batch Files #
+[*.{cmd,bat}]
+end_of_line = crlf
+indent_size = 2
+
+[*.{yml,yaml}]
+indent_size = 2
+
+[*.cs]
+indent_size = 4
+max_line_length = 130
+# Default Severity for all .NET Code Style rules below
+# https://learn.microsoft.com/en-us/visualstudio/code-quality/use-roslyn-analyzers?view=vs-2022#set-rule-severity-of-multiple-analyzer-rules-at-once-in-an-editorconfig-file
+dotnet_analyzer_diagnostic.severity = error
+
+###############################
+# .NET Coding Conventions     #
+###############################
+# Ignored Code Analysis Rules
+dotnet_diagnostic.CA1062.severity = none #  validate parameter is non-null before using it.
+dotnet_diagnostic.CA1724.severity = none #  Namespaces conflicts with library conflicts, and class conflicts with namespaces.
+dotnet_diagnostic.CA1711.severity = none #  Rename type so it doesn't end with ('Exception', 'Event', etc.)
+dotnet_diagnostic.CA1716.severity = none #  Rename namespace so it doesn't conflict
+dotnet_diagnostic.CA1032.severity = none #  Should implement all overloads of exceptions
+
+# Organize usings
+dotnet_sort_system_directives_first = true
+# this. preferences
+dotnet_style_qualification_for_field = false
+dotnet_style_qualification_for_property = false
+dotnet_style_qualification_for_method = false
+dotnet_style_qualification_for_event = false
+dotnet_diagnostic.IDE0003.severity = error
+# Language keywords vs BCL types preferences
+dotnet_style_predefined_type_for_locals_parameters_members = true
+dotnet_style_predefined_type_for_member_access = true
+dotnet_diagnostic.IDE0049.severity = error
+csharp_preferred_modifier_order = public, private, protected, internal, file, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, required, volatile, async
+dotnet_diagnostic.IDE0036.severity = error
+# Modifier preferences
+dotnet_style_require_accessibility_modifiers = omit_if_default
+dotnet_diagnostic.IDE0040.severity = error
+dotnet_style_readonly_field = true
+dotnet_diagnostic.IDE0044.severity = error
+csharp_prefer_static_local_function = true
+dotnet_diagnostic.IDE0062.severity = error
+# Parentheses preferences
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity
+dotnet_diagnostic.IDE0047.severity = error
+dotnet_diagnostic.IDE0048.severity = error
+dotnet_diagnostic.IDE0010.severity = error
+# Expression-level preferences
+dotnet_style_object_initializer = true
+dotnet_diagnostic.IDE0017.severity = error
+csharp_style_inlined_variable_declaration = true
+dotnet_diagnostic.IDE0018.severity = error
+dotnet_style_collection_initializer = true
+dotnet_diagnostic.IDE0028.severity = error
+dotnet_style_prefer_auto_properties = true
+dotnet_diagnostic.IDE0032.severity = error
+dotnet_style_explicit_tuple_names = true
+dotnet_diagnostic.IDE0033.severity = error
+csharp_prefer_simple_default_expression = true
+csharp_style_expression_bodied_operators = true
+dotnet_diagnostic.IDE0034.severity = error
+dotnet_style_prefer_inferred_tuple_names = false
+dotnet_style_prefer_inferred_anonymous_type_member_names = false
+dotnet_diagnostic.IDE0037.severity = error
+csharp_style_prefer_local_over_anonymous_function = true
+dotnet_diagnostic.IDE0039.severity = error
+csharp_style_deconstructed_variable_declaration = true
+dotnet_diagnostic.IDE0042.severity = error
+dotnet_style_prefer_conditional_expression_over_assignment = true
+dotnet_diagnostic.IDE0045.severity = error
+dotnet_style_prefer_conditional_expression_over_return = true
+dotnet_diagnostic.IDE0046.severity = error
+dotnet_style_prefer_compound_assignment = true
+dotnet_diagnostic.IDE0054.severity = error
+dotnet_diagnostic.IDE0074.severity = error
+csharp_style_prefer_index_operator = true
+dotnet_diagnostic.IDE0056.severity = error
+csharp_style_prefer_range_operator = true
+dotnet_diagnostic.IDE0057.severity = error
+dotnet_diagnostic.IDE0070.severity = error
+dotnet_style_prefer_simplified_interpolation = true
+dotnet_diagnostic.IDE0071.severity = error
+dotnet_diagnostic.IDE0072.severity = error
+dotnet_style_prefer_simplified_boolean_expressions = true
+dotnet_diagnostic.IDE0075.severity = error
+dotnet_diagnostic.IDE0082.severity = error
+csharp_style_implicit_object_creation_when_type_is_apparent = true
+dotnet_diagnostic.IDE0090.severity = error
+dotnet_diagnostic.IDE0180.severity = error
+csharp_style_namespace_declarations = file_scoped
+dotnet_diagnostic.IDE0160.severity = error
+dotnet_diagnostic.IDE0161.severity = error
+# Null-checking preferences
+csharp_style_throw_expression = true
+dotnet_diagnostic.IDE0016.severity = error
+dotnet_style_coalesce_expression = true
+dotnet_diagnostic.IDE0029.severity = error
+dotnet_diagnostic.IDE0030.severity = error
+dotnet_style_null_propagation = true
+dotnet_diagnostic.IDE0031.severity = error
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true
+dotnet_diagnostic.IDE0041.severity = error
+csharp_style_prefer_null_check_over_type_check = true
+dotnet_diagnostic.IDE0150.severity = error
+csharp_style_conditional_delegate_call = true
+dotnet_diagnostic.IDE1005.severity = error
+# var preferences
+csharp_style_var_for_built_in_types = false
+csharp_style_var_when_type_is_apparent = false
+csharp_style_var_elsewhere = false
+dotnet_diagnostic.IDE0007.severity = error
+dotnet_diagnostic.IDE0008.severity = error
+dotnet_diagnostic.IDE0001.severity = error
+dotnet_diagnostic.IDE0002.severity = error
+dotnet_diagnostic.IDE0004.severity = error
+dotnet_diagnostic.IDE0005.severity = error
+dotnet_diagnostic.IDE0035.severity = error
+dotnet_diagnostic.IDE0051.severity = error
+dotnet_diagnostic.IDE0052.severity = error
+# Expression-bodied members
+csharp_style_expression_bodied_methods = true:error
+csharp_style_expression_bodied_constructors = true:error
+csharp_style_expression_bodied_operators = true:error
+csharp_style_expression_bodied_properties = true:error
+csharp_style_expression_bodied_indexers = true:error
+csharp_style_expression_bodied_accessors = true:error
+csharp_style_expression_bodied_lambdas = true:error
+csharp_style_expression_bodied_local_functions = true:error
+# Code block preferences
+csharp_prefer_braces = false:error
+csharp_prefer_simple_using_statement = true:error
+dotnet_diagnostic.IDE0063.severity = error
+# C# Unnecessary code rules
+csharp_style_unused_value_expression_statement_preference = discard_variable
+dotnet_diagnostic.IDE0058.severity = error
+csharp_style_unused_value_assignment_preference = discard_variable
+dotnet_diagnostic.IDE0059.severity = error
+# No non-private instance fields are allowed
+# https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1401.md
+dotnet_naming_symbols.stylecop_fields_must_be_private_group.applicable_accessibilities = public, internal, protected_internal, protected, private_protected
+dotnet_naming_symbols.stylecop_fields_must_be_private_group.applicable_kinds = field
+dotnet_naming_rule.stylecop_instance_fields_must_be_private_rule.symbols = stylecop_fields_must_be_private_group
+dotnet_naming_rule.stylecop_instance_fields_must_be_private_rule.style = disallowed_style
+dotnet_naming_rule.stylecop_instance_fields_must_be_private_rule.severity = error
+
+###############################
+# Naming Conventions          #
+###############################
+# Style Definitions
+# pascal_case_style - Define the PascalCase style
+dotnet_naming_style.pascal_case_style.capitalization = pascal_case
+# first_upper_style - The first character must start with an upper-case character
+dotnet_naming_style.first_upper_style.capitalization = first_word_upper
+# prefix_interface_with_i_style - Interfaces must be PascalCase and the first character of an interface must be an 'I'
+dotnet_naming_style.prefix_interface_with_i_style.capitalization = pascal_case
+dotnet_naming_style.prefix_interface_with_i_style.required_prefix = I
+# prefix_type_parameters_with_t_style - Generic Type Parameters must be PascalCase and the first character must be a 'T'
+dotnet_naming_style.prefix_type_parameters_with_t_style.capitalization = pascal_case
+dotnet_naming_style.prefix_type_parameters_with_t_style.required_prefix = T
+# Static fields must be camelCase
+dotnet_naming_style.static_field_style.capitalization = camel_case
+dotnet_naming_style.prefix_static_fields_with_s_style.required_prefix = none
+# All constant fields must be PascalCase
+# https://docs.microsoft.com/dotnet/standard/design-guidelines/field
+dotnet_naming_symbols.constant_fields_group.applicable_accessibilities = *
+dotnet_naming_symbols.constant_fields_group.required_modifiers = const
+dotnet_naming_symbols.constant_fields_group.applicable_kinds = field
+dotnet_naming_rule.constant_fields_must_be_pascal_case_rule.symbols = constant_fields_group
+dotnet_naming_rule.constant_fields_must_be_pascal_case_rule.style = pascal_case_style
+dotnet_naming_rule.constant_fields_must_be_pascal_case_rule.severity = error
+# Function parameters use camelCase
+# https://docs.microsoft.com/dotnet/standard/design-guidelines/naming-parameters
+dotnet_naming_symbols.parameters_group.applicable_kinds = parameter
+dotnet_naming_rule.parameters_rule.symbols = parameters_group
+dotnet_naming_rule.parameters_rule.style = camel_case_style
+dotnet_naming_rule.parameters_rule.severity = error
+# Private fields must be camelCase
+# https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1306.md
+dotnet_naming_symbols.stylecop_private_fields_group.applicable_accessibilities = private
+dotnet_naming_symbols.stylecop_private_fields_group.applicable_kinds = field
+dotnet_naming_rule.stylecop_private_fields_must_be_camel_case_rule.symbols = stylecop_private_fields_group
+dotnet_naming_rule.stylecop_private_fields_must_be_camel_case_rule.style = camel_case_style
+dotnet_naming_rule.stylecop_private_fields_must_be_camel_case_rule.severity = warning
+# Local variables must be camelCase
+# https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1312.md
+dotnet_naming_symbols.stylecop_local_fields_group.applicable_accessibilities = local
+dotnet_naming_symbols.stylecop_local_fields_group.applicable_kinds = local
+dotnet_naming_rule.stylecop_local_fields_must_be_camel_case_rule.symbols = stylecop_local_fields_group
+dotnet_naming_rule.stylecop_local_fields_must_be_camel_case_rule.style = camel_case_style
+dotnet_naming_rule.stylecop_local_fields_must_be_camel_case_rule.severity = error
+
+###############################
+# C# Formatting Rules         #
+###############################
+# New line preferences
+# https://docs.microsoft.com/visualstudio/ide/editorconfig-formatting-conventions#new-line-options
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_members_in_anonymous_types = true
+csharp_new_line_between_query_expression_clauses = true
+# Indentation options
+# https://docs.microsoft.com/visualstudio/ide/editorconfig-formatting-conventions#indentation-options
+csharp_indent_case_contents = true
+csharp_indent_switch_labels = true
+csharp_indent_labels = no_change
+csharp_indent_block_contents = true
+csharp_indent_braces = false
+csharp_indent_case_contents_when_block = false
+# Spacing options
+# https://docs.microsoft.com/visualstudio/ide/editorconfig-formatting-conventions#spacing-options
+csharp_space_after_cast = false
+csharp_space_after_keywords_in_control_flow_statements = false
+csharp_space_between_parentheses = false
+csharp_space_before_colon_in_inheritance_clause = true
+csharp_space_after_colon_in_inheritance_clause = true
+csharp_space_around_binary_operators = before_and_after
+csharp_space_between_method_declaration_parameter_list_parentheses = false
+csharp_space_between_method_declaration_empty_parameter_list_parentheses = false
+csharp_space_between_method_declaration_name_and_open_parenthesis = false
+csharp_space_between_method_call_parameter_list_parentheses = false
+csharp_space_between_method_call_empty_parameter_list_parentheses = false
+csharp_space_between_method_call_name_and_opening_parenthesis = false
+csharp_space_after_comma = true
+csharp_space_before_comma = false
+csharp_space_after_dot = false
+csharp_space_before_dot = false
+csharp_space_after_semicolon_in_for_statement = true
+csharp_space_before_semicolon_in_for_statement = false
+csharp_space_around_declaration_statements = false
+csharp_space_before_open_square_brackets = false
+csharp_space_between_empty_square_brackets = false
+csharp_space_between_square_brackets = false
+# Wrap options
+# https://docs.microsoft.com/visualstudio/ide/editorconfig-formatting-conventions#wrap-options
+csharp_preserve_single_line_statements = false
+csharp_preserve_single_line_blocks = true
+
+# This rule should never fire.  However, it's included for at least two purposes:
+# First, it helps to understand, reason about, and root-case certain types of issues, such as bugs in .editorconfig parsers.
+# Second, it helps to raise immediate awareness if a new field type is added (as occurred recently in C#).
+dotnet_naming_symbols.sanity_check_uncovered_field_case_group.applicable_accessibilities = *
+dotnet_naming_symbols.sanity_check_uncovered_field_case_group.applicable_kinds = field
+dotnet_naming_rule.sanity_check_uncovered_field_case_rule.symbols = sanity_check_uncovered_field_case_group
+dotnet_naming_rule.sanity_check_uncovered_field_case_rule.style = internal_error_style
+dotnet_naming_rule.sanity_check_uncovered_field_case_rule.severity = error
+
+##########################################
+# Resharper specific rules
+##########################################
+resharper_object_creation_when_type_evident = target_typed
+resharper_place_simple_initializer_on_single_line = false
+resharper_max_initializer_elements_on_line = 0
+resharper_csharp_align_multiline_argument = false
+resharper_method_or_operator_body = expression_body
+resharper_local_function_body = expression_body
+resharper_csharp_keep_blank_lines_in_code = 1
+resharper_blank_lines_around_single_line_field = 0
+resharper_blank_lines_around_type = 1
+resharper_wrap_before_ternary_opsigns = true
+resharper_csharp_wrap_arguments_style = chop_if_long
+resharper_default_private_modifier = implicit
+resharper_parentheses_non_obvious_operations = none, shift, conditional_and, conditional_or, conditional
+resharper_use_heuristics_for_body_style = true
+# attribute rules
+resharper_max_attribute_length_for_same_line = 0
+resharper_place_accessorholder_attribute_on_same_line = false
+resharper_force_attribute_style = separate
+resharper_csharp_wrap_after_declaration_lpar = true
+resharper_csharp_wrap_parameters_style = chop_if_long
+resharper_max_formal_parameters_on_line = 7
+resharper_arguments_literal = named
+resharper_arguments_string_literal = named
+resharper_default_value_when_type_not_evident = default_literal
+resharper_parentheses_redundancy_style = remove_if_not_clarifies_precedence
+
+[{**/Migrations/*.cs, *.g.cs}]
+generated_code = true
