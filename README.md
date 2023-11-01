@@ -1,3 +1,10 @@
-﻿# Resources
+# Developer Quotes
+The intention of this project is to share quotes that can be useful to developers.
 
-- [blackchancery front](https://www.1001fonts.com/old-english+medieval-fonts.html)
+Please feel free to suggest quotes, fix or add missing authors, suggest features and start discussions.
+
+# Resources
+
+- The project is implemented with .Net 8 and [Blazor Static Server Rendering](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0).
+- The font for the project is [blackchancery front](https://www.1001fonts.com/old-english+medieval-fonts.html)
+- We also include a minified version of [Bootstrap 5.3.3](https://getbootstrap.com/)
