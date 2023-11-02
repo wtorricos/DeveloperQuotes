@@ -1,10 +1,14 @@
 @font-face {
-    font-family: 'blackchancery';
-    src: url('blackchancery/BLKCHCRY.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+    font-family: 'BlackChancery';
+    src: url('blackchancery/BlackChancery.eot');
+    src: url('blackchancery/BlackChancery.eot?#iefix') format('embedded-opentype'), url('blackchancery/BlackChancery.woff2') format('woff2'), url('blackchancery/BlackChancery.woff') format('woff'), url('blackchancery/BlackChancery.ttf') format('truetype'), url('blackchancery/BlackChancery.svg#BlackChancery') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
 }
 
 html, body {
-    font-family: 'blackchancery', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'BlackChancery', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background: black;
     width: 100%;
     height: 100%;
