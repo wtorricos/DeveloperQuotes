@@ -105,7 +105,7 @@ public static class InMemoryQuoteList
             Sometimes, the elegant implementation is just a function. Not a method. Not a class.
             Not a framework. Just a function.
             """),
-        new(Id: 22, Title: string.Empty, Author: "Anonymous - Rule of Least Power", HtmlText:
+        new(Id: 22, Title: "Rule of Least Power", Author: string.Empty, HtmlText:
             """
             Given a choice of solutions, pick the least powerful solution capable of solving your problem.
             """),
@@ -159,15 +159,15 @@ public static class InMemoryQuoteList
             than it was before. And so that we go home at night and look in the mirror and smile,
             knowing we did a good job today.
             """),
-        new(Id: 34, Title: string.Empty, Author: "Anonymous - YAGNI Principle", HtmlText:
+        new(Id: 34, Title: "YAGNI Principle", Author: string.Empty, HtmlText:
             """
             You Ain't Gonna Need It.
             """),
-        new(Id: 35, Title: string.Empty, Author: "Anonymous - KISS Principle", HtmlText:
+        new(Id: 35, Title: "KISS Principle", Author: string.Empty, HtmlText:
             """
             Keep It Simple, Stupid.
             """),
-        new(Id: 36, Title: string.Empty, Author: "Anonymous - The Boy Scout Rule", HtmlText:
+        new(Id: 36, Title: "The Boy Scout Rule", Author: string.Empty, HtmlText:
             """
             Check the code in cleaner that you checked it out.
             """),
@@ -179,7 +179,7 @@ public static class InMemoryQuoteList
             """
             All models are wrong, some models are useful.
             """),
-        new(Id: 39, Title: string.Empty, Author: "Anonymous - Postel's Law", HtmlText:
+        new(Id: 39, Title: "Postel's Law", Author: string.Empty, HtmlText:
             """
             Be conservative in what you send, be liberal in what you accept.
             """),
@@ -199,7 +199,7 @@ public static class InMemoryQuoteList
             """
             What we hope ever to do with ease, we must learn first to do with diligence.
             """),
-        new(Id: 43, Title: string.Empty, Author: "Anonymous - The Rule of Three", HtmlText:
+        new(Id: 43, Title: "The Rule of Three", Author: string.Empty, HtmlText:
             """
             When you find yourself repeating something for the third time, refactor.
             """),
@@ -300,7 +300,7 @@ public static class InMemoryQuoteList
             """
             Duplication is far cheaper than the wrong abstraction.
             """),
-        new(Id: 59, Title: "Cupid for joyful coding", Author: "Cupid - Dan North", HtmlText:
+        new(Id: 59, Title: "Cupid for joyful coding", Author: "Dan North", HtmlText:
             """
             <p class="fs-2"> Composable: plays well with others.</p>
             <p class="fs-2"> Unix philosophy: does one thing well.</p>
