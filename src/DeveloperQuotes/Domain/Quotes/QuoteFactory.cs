@@ -9,4 +9,8 @@ public sealed class QuoteFactory
         int number = RandomNumberGenerator.GetInt32(InMemoryQuoteList.Quotes.Count);
         return InMemoryQuoteList.Quotes[number];
     }
+
+    public QuoteModel GetQuoteById(int id) =>
+        InMemoryQuoteList.Quotes.FirstOrDefault(q => q.Id == id)
+        ?? throw new ArgumentException($"Quote {id} not found");
 }

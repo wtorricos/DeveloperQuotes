@@ -1,0 +1,24 @@
+@page "/quote/{Id:int}"
+
+<PageTitle>Random Quote</PageTitle>
+
+<Parchment ParchmentId="@($"{quoteDefinition.Id}")"
+           Title="@quoteDefinition.Title"
+           Author="@quoteDefinition.Author">
+    @((MarkupString)quoteDefinition.HtmlText)
+</Parchment>
+
+@inject QuoteFactory quoteFactory;
+
+@code {
+    private QuoteModel quoteDefinition = null!;
+
+    [Parameter]
+    public int Id { get; set; }
+
+    protected override Task OnInitializedAsync()
+    {
+        quoteDefinition = quoteFactory.GetQuoteById(Id);
+        return Task.CompletedTask;
+    }
+}
