@@ -60,7 +60,7 @@ public static class InMemoryQuoteList
             """),
         new(Id: 12, Title: string.Empty, Author: "Heraclitus", HtmlText:
             """
-            "The only constant is change."
+            The only constant is change.
             """),
         new(Id: 13, Title: string.Empty, Author: "Scott Wlaschin - Domain Modeling Made Functional", HtmlText:
             """
@@ -302,12 +302,15 @@ public static class InMemoryQuoteList
             """),
         new(Id: 59, Title: "Cupid for joyful coding", Author: "Dan North", HtmlText:
             """
-            <p class="fs-2"> Composable: plays well with others.</p>
-            <p class="fs-2"> Unix philosophy: does one thing well.</p>
-            <p class="fs-2"> Predictable: does what you expect.</p>
-            <p class="fs-2"> Idiomatic: feels natural.</p>
-            <p class="fs-2"> Domain-based: the solution domain models the problem domain in
-            language and structure</p>
+            <div class="text-left">
+                <p class="fs-1 m-0 text-left"> <b>C</b> omposable: plays well with others.</p>
+                <p class="fs-1 m-0 text-left"> <b>U</b> nix philosophy: does one thing well.</p>
+                <p class="fs-1 m-0 text-left"> <b>P</b> redictable: does what you expect.</p>
+                <p class="fs-1 m-0 text-left"> <b>I</b> diomatic: feels natural.</p>
+                <p class="fs-1 m-0 text-left">
+                    <b>D</b> omain-based: the solution domain models the problem domain in language and structure
+                </p>
+            </div>
             """),
         new(Id: 60, Title: "Manifesto for Software Craftsmanship", Author: string.Empty, HtmlText:
             """
@@ -330,6 +333,11 @@ public static class InMemoryQuoteList
         new(Id: 61, Title: string.Empty, Author: "Jeff Olson", HtmlText:
             """
             Sometimes you need to slow down to go fast.
+            """),
+        new(Id: 62, Title: "Rubber Ducking", Author: "Greg Pugh", HtmlText:
+            """
+            Place a rubber duck on your monitor and describe your problems to it. There’s something magical about stating your
+            problems aloud that makes the solution more clear.
             """)
     };
 }
