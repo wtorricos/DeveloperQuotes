@@ -23,12 +23,6 @@
         if(Id == default)
         {
             quoteDefinition = quoteFactory.GetRandomQuote();
-
-            // TODO: Fix issue with QueryHelpers not updating the query params correctly
-            QueryHelpers.AddQueryString(
-                navigationManager.Uri,
-                nameof(Id),
-                quoteDefinition.Id.ToString());
         }
         else
         {

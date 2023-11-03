@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,7 +14,12 @@
 
 <body>
     <Routes />
-    <script src="_framework/blazor.web.js"></script>
+    @* Removing blazor.web.js causes a full re-render on each request,
+        we are ok with that until we find a better way to set the quoteId
+        in the query parameters.
+    *@
+    @* <script src="_framework/blazor.web.js"></script> *@
+    <script src="app.js"></script>
 </body>
 
 </html>
