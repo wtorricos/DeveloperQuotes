@@ -338,6 +338,16 @@ public static class InMemoryQuoteList
             """
             Place a rubber duck on your monitor and describe your problems to it. There’s something magical about stating your
             problems aloud that makes the solution more clear.
-            """)
+            """),
+        new(Id: 63, Title: "Solid Principles", Author: string.Empty, HtmlText:
+            """
+            <div class="text-left">
+                <p class="fs-1 m-0 text-left"> <b>S</b> ingle-responsibility Principle</p>
+                <p class="fs-1 m-0 text-left"> <b>O</b> pen closed Principle</p>
+                <p class="fs-1 m-0 text-left"> <b>L</b> iskov substitution Principle</p>
+                <p class="fs-1 m-0 text-left"> <b>I</b> nterface Segregation Principle</p>
+                <p class="fs-1 m-0 text-left"> <b>D</b> ependency Inversion Principle</p>
+            </div>
+            """),
     };
 }
