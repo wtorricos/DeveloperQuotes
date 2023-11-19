@@ -16,11 +16,16 @@
 
 <body>
     <Routes />
-    @* Removing blazor.web.js causes a full re-render on each request,
-        we are ok with that until we find a better way to set the quoteId
-        in the query parameters.
+    @*
+        We disable enhanced navigation in order to set the QuoteId as a query parameter on page load.
+        https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/startup?view=aspnetcore-8.0#disable-enhanced-navigation-and-form-handling
     *@
-    @* <script src="_framework/blazor.web.js"></script> *@
+    <script src="_framework/blazor.web.js" autostart="false"></script>
+    <script>
+        Blazor.start({
+            ssr: { disableDomPreservation: true }
+        });
+    </script>
     <script src="app.js"></script>
 </body>
 

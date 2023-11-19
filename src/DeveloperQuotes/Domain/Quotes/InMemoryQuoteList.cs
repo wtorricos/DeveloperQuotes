@@ -237,7 +237,7 @@ public static class InMemoryQuoteList
             """
             The customer is part of the team.
             """),
-        new(Id: 51, Title: string.Empty, Author: "Agile", HtmlText:
+        new(Id: 51, Title: "Agile Best Practices", Author: string.Empty, HtmlText:
             """
             Fail fast, fail often.
             <br />
